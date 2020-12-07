@@ -38,4 +38,3 @@ final class Common
         return $array;
     }
 }
-}
