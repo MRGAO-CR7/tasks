@@ -19,4 +19,23 @@ final class Common
 
         return ucfirst($result);
     }
+
+    public static function next_binary_number(Array $array)
+    {
+        $len = count($array);
+        for ($i = $len -1; $i >= 0; $i--) {
+            $array[$i] += 1;
+            if ($array[$i] == 2) {
+                $array[$i] = 0;
+            } else {
+                break;
+            }
+        }
+
+        if ($array[0] === 0) {
+            return array_merge([1], $array);
+        }
+        return $array;
+    }
+}
 }
