@@ -2,7 +2,7 @@
 
 namespace App\Model;
 
-abstract class Common
+final class Common
 {
     public static function repeat (Array $array, $times = 3)
     {
